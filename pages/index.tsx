@@ -16,7 +16,7 @@ export async function getStaticProps() {
 
   const res = await client.getEntries({
     content_type: "projects",
-    // order: "sys.createdAt",
+    order: "fields.id",
   });
 
   return {

@@ -1,3 +1,6 @@
+import Image from "next/image";
+import IMG from "../assets/5.png";
+
 export const Hero = () => {
   return (
     <div className="container mt-16 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
@@ -31,7 +34,7 @@ export const Hero = () => {
           </div>
         </nav>
 
-        <div className="flex flex-wrap lg:ml-20 justify-center md:justify-start max-w-xl mt-0 md:my-36">
+        <div className="flex flex-wrap lg:ml-20 justify-center md:justify-start max-w-xl mt-0 md:my-36 ">
           <h1 className="font-bold text-5xl md:text-6xl lg:text-7xl text-center md:text-left">
             Building
             <br /> beautiful web experiences.
@@ -63,7 +66,26 @@ export const Hero = () => {
             </a>
           </div>
         </div>
-        {/* <img src="img/man.png" alt="Man" class="w-3/4 mt-12 md:absolute -mt-6 md:mt-0 right-0 -z-1"> */}
+
+        {/* <img
+          src="/home/userx/portfolio/assets/5.png"
+          alt="Man"
+          className="w-3/4 mt-12 md:absolute -mt-6 md:mt-0 right-0 -z-1"
+        ></img> */}
+      </div>
+      <div className="hidden md:block">
+        <Image
+          placeholder="blur"
+          src={IMG}
+          alt="Man"
+          width={300}
+          height={300}
+          // quality={65}
+          // className="w-3/4 mt-12 md:absolute -mt-6 md:mt-0 right-0 -z-1"
+          // width={600}
+          // height={300}
+          // layout="responsive"
+        />
       </div>
     </div>
   );

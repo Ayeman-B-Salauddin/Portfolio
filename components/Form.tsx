@@ -11,11 +11,11 @@ export const Form = () => {
 
     emailjs
       .sendForm(
+        "service_do6fj2b",
+        "template_2bdx73r",
         //@ts-ignore
-        process.env.EMAIL_JS_SERVICE,
-        process.env.EMAIL_JS_TEMPLATE,
         form.current,
-        process.env.EMAIL_JS_USER
+        "w7Kcsxv18MJb-eKKk"
       )
       .then(
         (result) => {
