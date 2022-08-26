@@ -1,7 +1,33 @@
 import { BsLinkedin } from "react-icons/bs";
 import { DiGithubFull } from "react-icons/di";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 
 export const Form = () => {
+  const form = useRef();
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        //@ts-ignore
+        process.env.EMAIL_JS_SERVICE,
+        process.env.EMAIL_JS_TEMPLATE,
+        form.current,
+        process.env.EMAIL_JS_USER
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
+
   return (
     <div className="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
       <section className="w-full">
@@ -13,12 +39,19 @@ export const Form = () => {
         </p>
 
         <div className="w-full grid lg:grid-cols-2 gap-8 lg:gap-32 mt-24">
-          <div className="space-y-12">
+          {/*          FORM BEGINS              */}
+          {/* 
+            //@ts-ignore  */}
+          <form ref={form} onSubmit={sendEmail} className="space-y-12">
             <div>
               <label className="text-white block mb-6 text-xl font-bold">
                 Name
               </label>
-              <input className="w-full border border-input-border bg-input px-4 py-4" />
+              <input
+                type="text"
+                name="user_name"
+                className="w-full border border-input-border bg-input px-4 py-4"
+              />
             </div>
             <div>
               <label className="text-white block mb-6 text-xl font-bold">
@@ -26,6 +59,7 @@ export const Form = () => {
               </label>
               <input
                 type="email"
+                name="user_email"
                 className="w-full border border-input-border bg-input px-4 py-4"
               />
             </div>
@@ -34,15 +68,21 @@ export const Form = () => {
                 Message
               </label>
               <textarea
+                name="message"
                 //@ts-ignore
                 type="email"
                 className="w-full border border-input-border bg-input px-4 py-4 h-56 resize-none"
               ></textarea>
             </div>
-            <button className="px-6 py-2 bg-theme text-white font-bold">
-              Send it!
-            </button>
-          </div>
+            <input
+              type="submit"
+              value="Send"
+              className="cursor-pointer px-6 py-2 bg-theme hover:bg-sky-900 text-white font-bold"
+            />
+            {/* Send it!
+            </input> */}
+          </form>
+          {/*          FORM ENDS.              */}
 
           <div className="mt-12">
             <a href="tel:+8801710129029">+880 1710129029</a>

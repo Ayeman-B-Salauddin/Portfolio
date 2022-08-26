@@ -33,6 +33,10 @@ const Home: NextPage = ({ projects }: any) => {
       <Head>
         <title>Ayeman</title>
         <meta name="description" content="Portfolio of Ayeman Bin Salauddin" />
+        <link
+          rel="icon"
+          href="https://img.icons8.com/ios-filled/18/000000/dryclean-with-any-solvent.png"
+        />
       </Head>
 
       <div className="bg-body text-white font-poppins pb-12">

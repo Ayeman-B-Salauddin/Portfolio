@@ -37,7 +37,10 @@ export const Hero = () => {
             <br /> beautiful web experiences.
           </h1>
           <div className="w-full flex justify-center md:justify-start">
-            <button className="px-8 py-4 bg-theme text-white font-bold mt-12 flex items-center space-x-3">
+            <a
+              href="#work"
+              className="px-8 py-4 bg-theme text-white font-bold mt-12 flex items-center space-x-3"
+            >
               <div>
                 <svg
                   width="22"
@@ -57,7 +60,7 @@ export const Hero = () => {
                 </svg>
               </div>
               <span>View my work.</span>
-            </button>
+            </a>
           </div>
         </div>
         {/* <img src="img/man.png" alt="Man" class="w-3/4 mt-12 md:absolute -mt-6 md:mt-0 right-0 -z-1"> */}
