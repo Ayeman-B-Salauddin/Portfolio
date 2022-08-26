@@ -66,12 +66,6 @@ export const Hero = () => {
             </a>
           </div>
         </div>
-
-        {/* <img
-          src="/home/userx/portfolio/assets/5.png"
-          alt="Man"
-          className="w-3/4 mt-12 md:absolute -mt-6 md:mt-0 right-0 -z-1"
-        ></img> */}
       </div>
       <div className="hidden md:block">
         <Image
@@ -80,11 +74,6 @@ export const Hero = () => {
           alt="Man"
           width={300}
           height={300}
-          // quality={65}
-          // className="w-3/4 mt-12 md:absolute -mt-6 md:mt-0 right-0 -z-1"
-          // width={600}
-          // height={300}
-          // layout="responsive"
         />
       </div>
     </div>
