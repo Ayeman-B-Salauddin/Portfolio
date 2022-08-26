@@ -94,10 +94,18 @@ export const Form = () => {
             </a>
 
             <div className="flex mt-20 space-x-6">
-              <a href="#">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/ayeman-bin-salauddin/"
+              >
                 <BsLinkedin size={70} />
               </a>
-              <a href="#">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/Ayeman-B-Salauddin"
+              >
                 <DiGithubFull size={70} />
               </a>
             </div>
