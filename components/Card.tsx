@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const Card = ({ project }: any) => {
   return (
-    <div className="max-w-sm rounded-lg border border-gray-200 shadow-md bg-gray-800 border-gray-700">
+    <div className="max-w-sm rounded-lg border shadow-md bg-gray-800 border-gray-700">
       <Image
         placeholder="blur"
         blurDataURL={project.fields.url}
@@ -14,11 +14,11 @@ export const Card = ({ project }: any) => {
       />
       <div className="p-5">
         <a target="_blank" rel="noreferrer" href={project.fields.demo}>
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-white">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight  text-white">
             {project.fields.title}
           </h5>
         </a>
-        <p className="mb-3 font-normal text-gray-700 text-gray-400">
+        <p className="mb-3 font-normal text-gray-400">
           {project.fields.description}
         </p>
         <a
