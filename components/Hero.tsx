@@ -1,5 +1,5 @@
 import Image from "next/image";
-import IMG from "../assets/5.png";
+import IMG from "../assets/7.png";
 
 export const Hero = () => {
   return (
